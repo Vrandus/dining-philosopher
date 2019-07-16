@@ -1,0 +1,21 @@
+.TH SIMUL 1
+.SH NAME
+simul \- simulate the dining philosopher problem using pthreads.
+.SH SYNOPSIS
+.B simul [options...]
+.SH DESCRIPTION
+using POSIX threads, simulate and calculate the thinking, hungry
+and eating time average.
+
+.SH OPTIONS
+.BI -N 
+       - specify number of threads
+.TP
+.BI -T 
+- specify cycles the process goes through
+.TP
+.BI -L 
+- change lambda value for THINKING state RNG
+.TP
+.BI -M 
+- change Mu value for EATING state RNG

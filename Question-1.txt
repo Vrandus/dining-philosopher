@@ -1,0 +1,21 @@
+1. the naming convention for pthread function calls is to add
+   "pthread_" to the beginning of the function call.
+   (found in man pthreads)
+
+2. POSIX Thread uses spinlocks, semaphores and mutexes to 
+   synchronize the running threads. They are used to signal
+   the threads to wake or sleep.
+   (found in man pthreads)
+
+3. it is good programming practice to do so because the
+   predicate associated with the condition wait needs to be
+   re evaluated to proceed safely.
+   (found in pthread_cond_wait(3))
+
+4. upon waking up from a condition variable, the thread is unlocked and
+   may proceed to continue it's task.
+
+5. if a thread blocks on a condition variable while holding two mutexes,
+   it is possible that it may cause a deadlock if other threads use the two mutexes.
+
+6. a detached thread is a thread which will release its resources back to the system.
